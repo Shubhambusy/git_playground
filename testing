@@ -2,3 +2,39 @@ this is the changes for git diff
 
 
 this is change in test branch to check files changes in PR. 
+
+{{if showvalue "category"}}
+    {{if .ItemInfoGrouping.Category}}
+    {{end}}
+{{end}} 
+
+
+{{if showvalue "brand"}}
+    {{if .ItemInfoGrouping.Brand}}
+    {{end}}
+{{end}}
+
+
+{{if showskubatch}}{{.ItemInfoGrouping.ArticleName}} 
+    {{if showvalue "sku_id"}}
+        {{if showskuid .ItemInfoGrouping.Sku}}
+            {{if .ItemInfoGrouping.Sku}}
+            {{end}}
+        {{end}}
+    {{end}}
+    {{if showvalue "pack_size"}}
+    {{end}}
+    {{if .BinNo}}({{.BinNo}}){{end}}<br/>
+    
+    {{if .WarehouseName}}{{.WarehouseName}}<br />{{end}}
+
+    {{if showbatch}}
+    {{end}}
+{{end}}
+{{end}}
+{{if showvalue "group_by_product"}} {{.ItemInfoGrouping.ProductName}}<br/>
+    {{if .WarehouseName}}{{.WarehouseName}}{{end}}
+    
+    {{if showvalue "special_instruction_on_item"}}
+        {{if .ItemInfoGrouping.SpecialInstruction}}({{.ItemInfoGrouping.SpecialInstruction}}){{end}}{{end}}
+{{end}}
