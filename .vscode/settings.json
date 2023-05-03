@@ -1,0 +1,15 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "staging1.pooraa.net",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "staging1",
+            "group": "pooraa",
+            "database": "tachyon",
+            "username": "tachyon",
+            "password": "Bvd^412"
+        }
+    ]
+}
